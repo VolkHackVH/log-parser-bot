@@ -40,7 +40,7 @@
     "check_interval": 5
   }
 
-- Запустите linux/mac или go run cmd/bot/main.go
+- Запустите linux/mac или `go run cmd/bot/main.go`
 
 
 
@@ -87,4 +87,4 @@
     "check_interval": 5
   }
 
-- Start linux/mac or go run cmd/bot/main.go
+- Start linux/mac or `go run cmd/bot/main.go`
