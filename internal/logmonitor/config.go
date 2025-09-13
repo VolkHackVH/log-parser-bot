@@ -47,12 +47,23 @@ func (c *Config) ToMonitorConfig() MonitorConfig {
 	var logConfig []LogConfig
 
 	for logName, channelID := range c.LogChannel {
-		if filepath, exists := c.LogFiles[logName]; exists {
-			logConfig = append(logConfig, LogConfig{
-				LogName:   logName,
-				FilePath:  filepath,
-				ChannelID: channelID,
-			})
+		if baseDir, exists := c.LogFiles[logName]; exists {
+			var matches []string
+
+			logMatches, _ := filepath.Glob(filepath.Join(baseDir, "*"+logName+"*.log"))
+
+			txtMatches, _ := filepath.Glob(filepath.Join(baseDir, "*"+logName+"*.txt"))
+
+			matches = append(matches, logMatches...)
+			matches = append(matches, txtMatches...)
+
+			if len(matches) > 0 {
+				logConfig = append(logConfig, LogConfig{
+					LogName:   logName,
+					FilePath:  matches[0],
+					ChannelID: channelID,
+				})
+			}
 		}
 	}
 
