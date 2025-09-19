@@ -2,6 +2,8 @@
 
 # RU
 ## ‼️ Создайте .env файл и вставьте туда токен Discord бота ‼️
+Название для переменной токена - **TOKEN**
+
 - ### Измените под себя config.json:
   ```json
   {
@@ -50,6 +52,8 @@ A bot for __line-by-line analysis__ of logs (.log/.txt) and sending them to **di
 
 # ENG
 ## ‼️ Create .env file and insert the bot's Discord token there
+The name for the token variable is **TOKEN**
+
 - ### Change config.json for yourself:
   ```json
   {
