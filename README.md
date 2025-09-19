@@ -1,3 +1,5 @@
+Бот для __построчного парсинга__ логов(.log/.txt) и отправки их в **дискорд**
+
 # RU
 ## ‼️ Создайте .env файл и вставьте туда токен Discord бота ‼️
 - ### Измените под себя config.json:
@@ -40,10 +42,11 @@
     "check_interval": 5
   }
 
-- Запустите linux/mac или `go run cmd/bot/main.go`
+- Запустите linux/mac или `go run cmd/bot/main.go`(Если у вас установлен golang)
+- 
+---------------------------------------------------------------------------------------------
 
-
-
+A bot for __line-by-line analysis__ of logs (.log/.txt) and sending them to **discord**
 
 # ENG
 ## ‼️ Create .env file and insert the bot's Discord token there
@@ -87,4 +90,5 @@
     "check_interval": 5
   }
 
-- Start linux/mac or `go run cmd/bot/main.go`
+- Start linux/mac or `go run cmd/bot/main.go`(
+If you have golang installed)
